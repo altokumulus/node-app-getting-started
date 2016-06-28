@@ -3,9 +3,9 @@
   "name": "node-example",
   "version": "1.0.0",
   "description": "This example is so cool.",
-  "main": "chat.js",
+  "main": "index.js",
   "scripts": {
-   "start": "node chat.js"
+   "start": "node index.js"
  
   },
   "keywords": [
