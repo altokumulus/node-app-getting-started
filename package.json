@@ -5,8 +5,8 @@
   "description": "This example is so cool.",
   "main": "chat.js",
   "scripts": {
-   "start": "node chat.js",
-    "start_working": "node index.js"
+   "start": "node chat.js"
+ 
   },
   "keywords": [
     "example",
