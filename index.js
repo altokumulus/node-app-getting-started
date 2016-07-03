@@ -32,6 +32,7 @@ const actions = {
     return new Promise(function(resolve, reject) {
       var location = firstEntityValue(entities, 'location')
       console.log('printing location', location);
+      location = 'rome';
       if (location) {
         context.forecast = 'sunny in ' + location; // we should call a weather API here
         delete context.missingLocation;
