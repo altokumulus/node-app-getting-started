@@ -16,12 +16,12 @@ app.listen((process.env.PORT || 3000));
 //start wit code
 //wit initialization
 let Wit = null;
-try {
+//try {
   // if running from repo
-  Wit = require('../').Wit;
-} catch (e) {
+  //Wit = require('../').Wit;
+//} catch (e) {
   Wit = require('node-wit').Wit;
-}
+//}
 //wit access toke
 // Wit.ai parameters
 //const WIT_TOKEN = process.env.WIT_TOKEN;
