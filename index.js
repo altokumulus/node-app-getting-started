@@ -50,9 +50,12 @@ const firstEntityValue = (entities, entity) => {
     entities[entity].length > 0 &&
     entities[entity][0].value
   ;
+  console.log('inside first entiry value before ret null', val);
   if (!val) {
+    console.log('too bad ret null', val);
     return null;
   }
+  console.log('got some val', val);
   return typeof val === 'object' ? val.value : val;
 };
 
