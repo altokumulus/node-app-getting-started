@@ -15,13 +15,6 @@ let Wit = null;
 //}
 const WIT_TOKEN = 'DESJT5X6GQDTE7UPHRRMYX6ULEENBDHS';
 
-//init wit class
-// Setting up our bot
-const wit = new Wit({
-  accessToken: WIT_TOKEN,
-  actions,
-  logger: new log.Logger(log.INFO)
-});
 
 //wit actions
 const actions = {
@@ -59,6 +52,14 @@ const firstEntityValue = (entities, entity) => {
   }
   return typeof val === 'object' ? val.value : val;
 };
+
+//init wit class
+// Setting up our bot
+const wit = new Wit({
+  accessToken: WIT_TOKEN,
+  actions,
+  logger: new log.Logger(log.INFO)
+});
 //end wit code
 
 var express = require('express');
