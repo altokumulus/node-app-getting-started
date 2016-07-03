@@ -157,6 +157,7 @@ app.post('/webhook', (req, res) => {
 
             // Let's forward the message to the Wit.ai Bot Engine
             // This will run all actions until our bot has nothing left to do
+            console.log('this is the message i typed', text);
             wit.runActions(
               sessionId, // the user's current session
               text, // the user's message
