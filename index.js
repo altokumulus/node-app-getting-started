@@ -41,7 +41,7 @@ const fbMessage = (id, text) => {
     return json;
   });
 };
-const actions = {
+/*const actions = {
   send({sessionId}, {text}) {
     // Our bot has something to say!
     // Let's retrieve the Facebook user whose session belongs to
@@ -68,14 +68,16 @@ const actions = {
   },
   // You should implement your custom actions here
   // See https://wit.ai/docs/quickstart
-};
-/*const actions = {
+};*/
+const actions = {
   send(request, response) {
     const {sessionId, context, entities} = request;
     const {text, quickreplies} = response;
     return new Promise(function(resolve, reject) {
       console.log('sending...', JSON.stringify(response));
-      return resolve();
+     // return resolve();
+     const recipientId = sessions[sessionId].fbid;
+     sendMessage(recipientId,JSON.stringify(response) );
     });
   },
   getForecast({context, entities}) {
@@ -91,9 +93,10 @@ const actions = {
         delete context.forecast;
       }
       return resolve(context);
+      
     });
   },
-};*/
+};
 
 const firstEntityValue = (entities, entity) => {
   const val = entities && entities[entity] &&
