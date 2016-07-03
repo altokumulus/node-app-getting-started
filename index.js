@@ -7,12 +7,12 @@
 //start wit code
 //wit initialization
 let Wit = null;
-try {
+//try {
   // if running from repo
-  Wit = require('../').Wit;
-} catch (e) {
+  //Wit = require('../').Wit;
+//} catch (e) {
   Wit = require('node-wit').Wit;
-}
+//}
 
 var express = require('express');
 var bodyParser = require('body-parser');
