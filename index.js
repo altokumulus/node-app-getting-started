@@ -31,6 +31,7 @@ const actions = {
   getForecast({context, entities}) {
     return new Promise(function(resolve, reject) {
       var location = firstEntityValue(entities, 'location')
+      console.log('printing location', location);
       if (location) {
         context.forecast = 'sunny in ' + location; // we should call a weather API here
         delete context.missingLocation;
