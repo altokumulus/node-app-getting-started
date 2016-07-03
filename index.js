@@ -1,3 +1,19 @@
+"use strict";
+(function() {
+  "use strict"; 
+  
+})(); 
+
+//start wit code
+//wit initialization
+let Wit = null;
+try {
+  // if running from repo
+  Wit = require('../').Wit;
+} catch (e) {
+  Wit = require('node-wit').Wit;
+}
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
