@@ -12,6 +12,7 @@ let Wit = null;
   //Wit = require('../').Wit;
 //} catch (e) {
   Wit = require('node-wit').Wit;
+  log = require('node-wit').log;
 //}
 const WIT_TOKEN = 'DESJT5X6GQDTE7UPHRRMYX6ULEENBDHS';
 
