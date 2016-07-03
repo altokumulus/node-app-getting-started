@@ -15,12 +15,12 @@ app.listen((process.env.PORT || 3000));
 
 //start wit code
 //wit initialization
-let Wit = null;
+//let Wit = null;
 //try {
   // if running from repo
   //Wit = require('../').Wit;
 //} catch (e) {
-  Wit = require('node-wit').Wit;
+  //Wit = require('node-wit').Wit;
 //}
 //wit access toke
 // Wit.ai parameters
@@ -29,11 +29,11 @@ const WIT_TOKEN = 'DESJT5X6GQDTE7UPHRRMYX6ULEENBDHS';
 
 //init wit class
 // Setting up our bot
-const wit = new Wit({
-  accessToken: WIT_TOKEN,
-  actions,
-  logger: new log.Logger(log.INFO)
-});
+//const wit = new Wit({
+  //accessToken: WIT_TOKEN,
+  //actions,
+  //logger: new log.Logger(log.INFO)
+//});
 
 
 
