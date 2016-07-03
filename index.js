@@ -13,6 +13,15 @@ let Wit = null;
 //} catch (e) {
   Wit = require('node-wit').Wit;
 //}
+const WIT_TOKEN = 'DESJT5X6GQDTE7UPHRRMYX6ULEENBDHS';
+
+//init wit class
+// Setting up our bot
+const wit = new Wit({
+  accessToken: WIT_TOKEN,
+  actions,
+  logger: new log.Logger(log.INFO)
+});
 
 var express = require('express');
 var bodyParser = require('body-parser');
