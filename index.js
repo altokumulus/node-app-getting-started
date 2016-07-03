@@ -7,6 +7,7 @@
 //start wit code
 //wit initialization
 let Wit = null;
+let log = null;
 //try {
   // if running from repo
   //Wit = require('../').Wit;
