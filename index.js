@@ -85,8 +85,8 @@ const actions = {
       var location = firstEntityValue(entities, 'wit_location')
       console.log('printing location', location);
       //location = 'rome';
-      var rome = "rome";
-      var paris = "paris";
+      var rome = "Rome";
+      var paris = "Paris";
       if (location==rome) {
         console.log('yayyyy location is romee', location);
         context.forecast = 'sunny in ' + location; // we should call a weather API here
