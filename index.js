@@ -102,9 +102,10 @@ const firstEntityValue = (entities, entity) => {
   console.log('printing entities', entities);
   console.log('printing entity', entity);
   console.log('printing entities[entity]', entities[entity]);
-   console.log('printing entities[entity]', entities[entity].length>0);
-    console.log('printing entities[entity]', entities[entity][0].value);
-     console.log('printing entities[entity]', entities[entity][2].value);
+  const bool = entities[entity].length>0;
+   console.log('printing entities[entity] bool', bool);
+    console.log('printing entities[entity] 0', entities[entity][0].value);
+     console.log('printing entities[entity] 2', entities[entity][2].value);
   const val = entities && entities[entity] &&
     Array.isArray(entities[entity]) &&
     entities[entity].length > 0 &&
