@@ -87,10 +87,10 @@ const actions = {
       //location = 'rome';
       if (location==='rome') {
         context.forecast = 'sunny in ' + location; // we should call a weather API here
-        delete context.missingLocation;
+        //delete context.missingLocation;
       } else if (location==='paris') {
         context.forecast = 'rainy in ' + location; // we should call a weather API here
-        delete context.missingLocation;
+       // delete context.missingLocation;
       } else {
         context.missingLocation = true;
         delete context.forecast;
