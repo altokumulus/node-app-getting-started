@@ -98,7 +98,7 @@ const actions = {
   },
 };
 
-/*const firstEntityValue = (entities, entity) => {
+const firstEntityValue = (entities, entity) => {
   console.log('printing entities', entities);
   console.log('printing entity', entity);
   console.log('printing entities[entity]', entities[entity]);
@@ -120,20 +120,7 @@ const actions = {
   console.log('got some val', val);
   return typeof val === 'object' ? val.value : val;
 };
-*/
-const firstEntityValue = (entities, entity) => {
-    const val = entities && entities[entity] &&
-            Array.isArray(entities[entity]) &&
-            entities[entity].length > 0 &&
-            entities[entity][0].value
-        ;
-        console.log('prin val ' , val);
-    if (!val) {
-        return null;
-    }
-    
-    return typeof val === 'object' ? val.value : val;
-};
+
 //init wit class
 // Setting up our bot
 const wit = new Wit({
