@@ -86,7 +86,7 @@ const actions = {
       console.log('printing location', location);
       //location = 'rome';
       if (location==='rome') {
-        console.log('yayyyy location is rome', location);
+        console.log('yayyyy location is romee', location);
         context.forecast = 'sunny in ' + location; // we should call a weather API here
         //delete context.missingLocation;
       } else if (location==='paris') {
