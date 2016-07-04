@@ -99,6 +99,8 @@ const actions = {
 };
 
 const firstEntityValue = (entities, entity) => {
+  console.log('printing entities', entities);
+  console.log('printing entity', entity);
   const val = entities && entities[entity] &&
     Array.isArray(entities[entity]) &&
     entities[entity].length > 0 &&
