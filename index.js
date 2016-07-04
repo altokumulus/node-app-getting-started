@@ -85,11 +85,13 @@ const actions = {
       var location = firstEntityValue(entities, 'wit_location')
       console.log('printing location', location);
       //location = 'rome';
-      if (location==='rome') {
+      var rome = "rome";
+      var paris = "paris";
+      if (location=="rome") {
         console.log('yayyyy location is romee', location);
         context.forecast = 'sunny in ' + location; // we should call a weather API here
         //delete context.missingLocation;
-      } else if (location==='paris') {
+      } else if (location=="paris") {
         console.log('yayyyy location is parissss', location);
         context.forecast = 'rainy in ' + location; // we should call a weather API here
        // delete context.missingLocation;
