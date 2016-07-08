@@ -267,7 +267,8 @@ app.post('/webhook', (req, res) => {
 function sendMessage(recipientId, message) {
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
-        qs: {access_token: 'EAAXA84xheSUBAJmAT8hcrz5jtoN0jvZBhgcynY4ZBD0W8r6IA4aZBeaqKs4eKe9tXUdd4NaTbbBGeIkTeoZBWG6lBPuayvS2CkbtR5MkzXZBQtyxEEsFSUJQaGXmVGuvWEbzbZAYaKzsGGYKEFiZCuhsxoyjVpFQnZCnpMKZCZBv2tLQHNfCeIfA5B'},
+        qs: {access_token: 'EAAXA84xheSUBABHeYTU2vjaIbiAFGJG8GZCeAlu25NR4ONZCi0DZA8SEgrkpwA5ZBQ7L36mWGZCZCyY8PpqNLbsIZCNZB7mINZCZB68fAODZAKmG1G2HgQi4GfFmpSZA2ZCXgUZCwXJtK5g5MJAlweCAlZAkxm0QdYPCBrt4f4Gr9e6pJRUHu2prrrOi1My
+'},
         method: 'POST',
         json: {
             recipient: {id: recipientId},
