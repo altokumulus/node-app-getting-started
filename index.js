@@ -77,6 +77,7 @@ const actions = {
       console.log('sending...', JSON.stringify(response));
      // return resolve();
      const recipientId = sessions[sessionId].fbid;
+     console.log("printing recipient id: ", recipientId);
      sendMessage(recipientId,JSON.stringify(response) );
     });
   },
