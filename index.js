@@ -277,6 +277,7 @@ function sendMessage(recipientId, message) {
         if (error) {
             console.log('Error sending message: ', error);
         } else if (response.body.error) {
+          console.log("I'm inside error block");
             console.log('Error: ', response.body.error);
         }
     });
