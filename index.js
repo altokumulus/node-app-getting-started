@@ -83,6 +83,7 @@ const actions = {
   },
   getForecast({context, entities}) {
     return new Promise(function(resolve, reject) {
+      console.log("before firstEntiyval call");
       var location = firstEntityValue(entities, 'wit_location')
       console.log('printing location', location);
       //location = 'rome';
