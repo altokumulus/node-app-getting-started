@@ -5,7 +5,7 @@
   "description": "This example is so cool.",
   "main": "index.js",
   "scripts": {
-   "start": "node index.js"
+   "start": "node --harmony_destructuring index.js"
  
   },
   "keywords": [
