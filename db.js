@@ -1,6 +1,6 @@
 var express   =    require("express");
 var mysql     =    require('mysql');
-var app       =    express();
+//var app       =    express();
 
 var pool      =    mysql.createPool({
     connectionLimit : 100, //important
@@ -11,7 +11,7 @@ var pool      =    mysql.createPool({
     debug    :  false
 });
 
-function handle_database(req,res) {
+/*function handle_database(req,res) {
     
     pool.getConnection(function(err,connection){
         if (err) {
@@ -33,7 +33,7 @@ function handle_database(req,res) {
               return;     
         });
   });
-}
+}*/
 
 //app.get("/",function(req,res){-
   //      handle_database(req,res);
