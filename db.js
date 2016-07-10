@@ -1,4 +1,4 @@
-module.exports = {
+
    // var express   =    require("express");
 var mysql     =    require('mysql');
 //var app       =    express();
@@ -11,7 +11,7 @@ var pool      =    mysql.createPool({
     database : 'chaty',
     debug    :  false
 });
-
+module.exports = {
 function handle_database(req,res) {
     
     pool.getConnection(function(err,connection){
