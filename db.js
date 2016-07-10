@@ -68,7 +68,7 @@ module.exports = connection;
 
 //app.get("/",function(req,res){-
   //      handle_database(req,res);
-}
+//}
 //);
 //};
 
