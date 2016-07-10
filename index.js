@@ -14,6 +14,7 @@ let log = null;
 //} catch (e) {
   Wit = require('node-wit').Wit;
   log = require('node-wit').log;
+ var dbmod = require("./db.js");
 //}
 const WIT_TOKEN = 'DESJT5X6GQDTE7UPHRRMYX6ULEENBDHS';
 
@@ -209,7 +210,7 @@ app.post('/webhook', (req, res) => {
   // https://developers.facebook.com/docs/messenger-platform/webhook-reference
   const data = req.body;
   console.log("TESTING SQL CONNECTION");
-  connection = handle_database(req,res);
+  connection = dbmod.handle_database(req,res);
 connection.query("select * from user_mesg_log",function(err,rows){
             connection.release();
             if(!err) {
