@@ -160,6 +160,8 @@ app.get('/webhook', function (req, res) {
     } else {
         res.send('Invalid verify token');
     }
+    
+    
 });
 
 // This will contain all user sessions.
@@ -199,14 +201,22 @@ const findOrCreateSession = (fbid) => {
     }
     res.sendStatus(200);
 });*/
-
+var connection;
 // Message handler
 app.post('/webhook', (req, res) => {
   // Parse the Messenger payload
   // See the Webhook reference
   // https://developers.facebook.com/docs/messenger-platform/webhook-reference
   const data = req.body;
-
+  console.log("TESTING SQL CONNECTION");
+  connection = handle_database(req,res);
+connection.query("select * from user_mesg_log",function(err,rows){
+            connection.release();
+            if(!err) {
+                res.json(rows);
+            }           
+        });
+        console.log("DONE TESTING SQL CONNECTION");
   if (data.object === 'page') {
     data.entry.forEach(entry => {
       entry.messaging.forEach(event => {
