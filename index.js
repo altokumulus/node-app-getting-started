@@ -14,7 +14,9 @@ let log = null;
 //} catch (e) {
   Wit = require('node-wit').Wit;
   log = require('node-wit').log;
- var dbmod = require("./db.js");
+ var dbmod = require('./db');
+ 
+ 
 //}
 const WIT_TOKEN = 'DESJT5X6GQDTE7UPHRRMYX6ULEENBDHS';
 
@@ -209,16 +211,33 @@ app.post('/webhook', (req, res) => {
   // See the Webhook reference
   // https://developers.facebook.com/docs/messenger-platform/webhook-reference
   const data = req.body;
+  
+  //testing connection
   console.log("TESTING SQL CONNECTION");
-  connection = dbmod.handle_database(req,res);
+  
+ 
+
+/*app.get('/save',function(req,res){
+    var post  = {from:'me',to:'you',msg:'hi'};
+    var query = db.query('INSERT INTO messages SET ?', post, function(err, result) {
+    if (err) throw err;
+    });
+});
+  connection = dbmod.handle_database(req,res);*/
   console.log("printing connection obj" , connection);
-connection.query("select * from user_mesg_log",function(err,rows){
+dbmod.query("select * from user_mesg_log",function(err,rows){
+  console.log('about to release connection');
             connection.release();
+              console.log('done to release connection');
             if(!err) {
+                console.log('printing rows');
                 res.json(rows);
+                console.log('done printing rows');
             }           
         });
         console.log("DONE TESTING SQL CONNECTION");
+        
+  //end testing connection      
   if (data.object === 'page') {
     data.entry.forEach(entry => {
       entry.messaging.forEach(event => {
