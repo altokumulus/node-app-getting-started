@@ -2,7 +2,7 @@
    // var express   =    require("express");
 var mysql     =    require('mysql');
 //var app       =    express();
-
+module.exports = {
 var pool      =    mysql.createPool({
     connectionLimit : 100, //important
     host     : 'localhost',
@@ -11,6 +11,7 @@ var pool      =    mysql.createPool({
     database : 'chaty',
     debug    :  false
 });
+}
 module.exports = {
     handle_database: function(req, res) {
     pool.getConnection(function(err,connection){
