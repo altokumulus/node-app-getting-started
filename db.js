@@ -1,6 +1,6 @@
 
    // var express   =    require("express");
-var mysql     =    require('mysql');
+/*var mysql     =    require('mysql');
 //var app       =    express();
 //module.exports = {
 var pool     ;
@@ -49,6 +49,22 @@ module.exports = {
         });
   });
 }*/
+
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+    host     : '127.0.0.1',
+    user     : 'chatydba',
+    password : 'chatydba',
+    database    : 'chaty'
+});
+
+connection.connect(function(err) {
+    if (err) {
+    console.error('error connecting: ' + err.stack);
+    return;
+}});
+
+module.exports = connection;
 
 //app.get("/",function(req,res){-
   //      handle_database(req,res);
