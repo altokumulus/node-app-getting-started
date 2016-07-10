@@ -277,7 +277,7 @@ dbmod.query("select * from user_mesg_log",function(err,rows){
             var post  = {username: sender, message:text};
  var query = connection.query('INSERT INTO user_mesg_log SET ?', post, function(err, result) {
    // Neat!
-   console.log(query);
+   console.log("done deal");
  });
  console.log(query.sql);
             wit.runActions(
