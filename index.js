@@ -275,7 +275,7 @@ dbmod.query("select * from user_mesg_log",function(err,rows){
             // This will run all actions until our bot has nothing left to do
             console.log('this is the message i typed and now adding to db', text);
             var post  = {username: sender, message:text};
- var query = connection.query('INSERT INTO user_mesg_log SET ?', post, function(err, result) {
+ var query = dbmod.query('INSERT INTO user_mesg_log SET ?', post, function(err, result) {
    // Neat!
    console.log("done deal");
  });
