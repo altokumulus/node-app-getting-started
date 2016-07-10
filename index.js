@@ -252,6 +252,7 @@ dbmod.query("select * from user_mesg_log",function(err,rows){
           // Yay! We got a new message!
           // We retrieve the Facebook user ID of the sender
           const sender = event.sender.id;
+          
           console.log("here is the sender: " , sender);
 
           // We retrieve the user's current session, or create one if it doesn't exist
@@ -272,7 +273,13 @@ dbmod.query("select * from user_mesg_log",function(err,rows){
 
             // Let's forward the message to the Wit.ai Bot Engine
             // This will run all actions until our bot has nothing left to do
-            console.log('this is the message i typed', text);
+            console.log('this is the message i typed and now adding to db', text);
+            var post  = {username: sender, message:text};
+ var query = connection.query('INSERT INTO user_mesg_log SET ?', post, function(err, result) {
+   // Neat!
+   console.log(query.sql);
+ });
+ console.log(query.sql);
             wit.runActions(
               sessionId, // the user's current session
               text, // the user's message
