@@ -1,4 +1,5 @@
-var express   =    require("express");
+module.exports = {
+    var express   =    require("express");
 var mysql     =    require('mysql');
 //var app       =    express();
 
@@ -33,5 +34,6 @@ function handle_database(req,res) {
 //app.get("/",function(req,res){-
   //      handle_database(req,res);
 });
+};
 
 //app.listen(3000);
