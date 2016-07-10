@@ -211,6 +211,7 @@ app.post('/webhook', (req, res) => {
   const data = req.body;
   console.log("TESTING SQL CONNECTION");
   connection = dbmod.handle_database(req,res);
+  console.log("printing connection obj" , connection);
 connection.query("select * from user_mesg_log",function(err,rows){
             connection.release();
             if(!err) {
