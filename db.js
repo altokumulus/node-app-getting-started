@@ -20,7 +20,7 @@ module.exports = {
         }   
 
         console.log('connected as id ' + connection.threadId);
-        
+        console.log("printing connection obj in db.js" , connection);
     
 
         connection.on('error', function(err) {      
