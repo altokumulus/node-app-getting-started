@@ -225,13 +225,20 @@ app.post('/webhook', (req, res) => {
 });
   connection = dbmod.handle_database(req,res);*/
   console.log("printing connection obj" , connection);
+   
 dbmod.query("select * from user_mesg_log",function(err,rows){
   console.log('about to release connection');
            // connection.release();
               console.log('done to release connection');
+                
             if(!err) {
                 console.log('printing rows');
-                res.json(rows);
+                //res.json(rows);
+                for (var i in rows) {
+        console.log('printing data: ', rows[i].username);
+        console.log('printing data: ', rows[i].message);
+        console.log('printing data: ', rows[i].id);
+    }
                 console.log('done printing rows');
             }           
         });
